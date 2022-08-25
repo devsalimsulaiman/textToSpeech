@@ -1,0 +1,66 @@
+body {
+        background: #000000;   
+        height: 100vh;     
+}
+
+#wave {
+    width: 40%;
+    height: 5%;  
+    margin-left: 80%;      
+}
+
+.wave {
+    width: 50%;
+    height: 5%; 
+    margin-top: -20px;     
+    margin-bottom: -5px;     
+}
+
+.container {
+    margin-top: -20px;
+}
+
+
+::placeholder {
+      color: black;
+      opacity: 1;
+}
+
+.btnContainer{
+    text-align: center; 
+    margin-bottom: -40px;
+}
+
+
+button {
+    width: 40%;   
+
+}
+
+label {
+    font-size: 16px;
+}
+
+input[type="range"]{
+    border: none !important;    
+}
+
+textarea {
+    height: 100px;
+    border-radius: 6px;    
+}
+
+.icons-container {
+    display: none;
+    margin-bottom: -60px;
+}
+
+.icons {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;    
+}
+
+#play {
+    display: none;
+}

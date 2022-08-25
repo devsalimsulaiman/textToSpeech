@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <!-- putting Google Icon Font offline -->
+   <link rel="stylesheet" href="iconfont/material-icons.css">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+  <!-- Using fontAwesome offline -->
+  <script defer src="fontawesome/js/all.js"></script>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text Synthesis Using Web API</title>
+</head>
+
+<body>
+  <div class="container">    
+    <h2 class="white-text center">Text To Speech</h2>
+    <br>
+        <div class="wave">
+          <img src="img/blackspace.svg" id="wave">
+        </div>  
+        <br>
+    <div class="row">
+      <div class="col s12">
+        <form>
+          <div>
+            <textarea name="" id="text-input" class="white" placeholder="Type anything.."></textarea>
+          </div>
+
+            <br> <br>
+            <div>
+               <label for="rate" class="white-text center">Rate</label>
+               <span id="rate-value" class="badge grey white-text darken-4 right">1</span>
+               <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1"> 
+            </div>
+                          
+            <div>
+               <label for="pitch" class="white-text center">Pitch</label>
+               <span id="pitch-value" class="badge grey white-text darken-4 right">1</span>
+               <input type="range" id="pitch" min="0" max="2" value="1" step="0.1"> 
+            </div>
+            
+            <div class="input-field white-text">              
+              <select id="voice-select"></select>  
+                <label>Select Voice</label>                          
+            </div>
+            <br>
+            <div class="icons-container center">
+              <img src="img/play.svg" class="icons" id="play" alt="play voice">
+              <img src="img/pause.svg" class="icons" id="pause" alt="pause voice">
+              <img src="img/stop.svg" class="icons" id="stop" alt="stop voice">
+          </div>    
+          <br>
+            <div class="btnContainer">
+              <button class="btn white small black-text" id="speakBtn">Read Out</button>
+            </div>
+            <br>     
+        </form>       
+      </div>
+    </div>
+    <br><br>
+    <p class="grey-text center">This tts App is an enhanced version of <a href="https://github.com/bradtraversy">Brad Traversy's</a> version, with added controls, filtered out known errors, and some DOM manipulations. Made by <a href="https://github.com/devsalimsulaiman">Salim Sulaiman el</a> </p>
+  </div>
+    
+
+
+
+
+  <!--Import jQuery before materialize.js-->
+  <script src="app.js"></script>
+  <script type="text/javascript" src="jquery/materializejquery.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // Init Select
+      $('select').material_select();
+    });
+  </script>
+</body>
+
+</html>
